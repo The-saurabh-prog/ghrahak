@@ -1,0 +1,274 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+  text-decoration: none;
+}
+
+body {
+  background-color: #feebf6;
+}
+
+/* Header Container */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 1rem;
+  border-bottom: 1.5px solid rgb(59, 55, 55);
+  background-color: #e6e7e9;
+}
+
+/* Title */
+.titlename h1 {
+  margin-left: 2rem;
+  font-weight: 500;
+  color: #230c7e;
+}
+
+/* Search Bar */
+.searchbar input {
+  height: 30px;
+  width: 500px;
+  margin-left: 1rem;
+  padding: 0 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  transition: 0.3s ease;
+}
+
+.searchbar input:hover {
+  border-color: #230c7e;
+  transform: scale(1.05);
+}
+
+/* Links */
+.suppiler a,
+.investor a {
+  color: black;
+  margin: 0 1rem;
+  font-weight: 500;
+}
+
+/* Profile */
+.profile {
+  text-decoration: double;
+  margin-right: 2rem;
+  padding: 1rem;
+}
+
+.profile:hover {
+  color: rgb(100, 100, 231);
+}
+
+.cart {
+  margin-top: 0.5rem;
+  padding: 1rem;
+}
+
+.cart:hover {
+  color: rgb(100, 100, 231);
+}
+
+/* Hamburger (hidden by default) */
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+/* Navigation Container (desktop view) */
+.nav-items {
+  display: flex;
+  align-items: center;
+}
+
+/* Second Fixed Header */
+.secondheader {
+  position: fixed;
+  top: 100px; /* Adjust based on actual height of .header */
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  margin: 0;
+  padding: 1rem;
+  border-bottom: 1.5px solid rgb(59, 55, 55);
+}
+.secondheader a {
+  text-decoration: none;
+  color: #696464;
+  font-weight: 500;
+}
+
+.secondheader a:hover {
+  color: #230c7e;
+}
+
+/* Main content pushed below both headers */
+.policy {
+  margin-top: 160px;
+  background-color: #fff;
+  /* adjust for both fixed headers */
+  padding: 0.5rem;
+  width: 99%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 4rem;
+  text-align: center;
+  border: 1.5px solid rgb(59, 55, 55);
+  border-radius: 5px;
+  font-weight: 400;
+  transform: translateY(8.5px);
+}
+
+.category {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin: 0.15rem;
+  margin-top: 1.5rem;
+  padding: 0.5rem;
+  width: 100%;
+  gap: 1.5rem;
+  font-weight: bold;
+}
+
+.category img {
+  padding: 0.5rem;
+  height: auto;
+  transition: transform 0.3s ease;
+  transform: translateY(8.5px);
+}
+
+.item p {
+  margin-top: 5px;
+  font-size: 14px;
+  color: #333;
+  text-align: center;
+}
+
+.category img:hover {
+  transform: scale(1.01);
+}
+
+.gold {
+  width: 100%;
+  background-color: #fff;
+  margin: 0 auto;
+}
+
+.gold img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hamburger {
+    display: block;
+    margin-top: 10px;
+  }
+
+  .nav-items {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: 0.5rem;
+    margin-top: 10px;
+  }
+
+  .nav-items.show {
+    display: flex;
+  }
+
+  .searchbar input {
+    width: 100%;
+    margin: 0;
+  }
+
+  .suppiler a,
+  .investor a,
+  .profile,
+  .cart {
+    margin: 0;
+    padding: 0.5rem 0;
+  }
+
+  .secondheader {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0.5rem;
+  }
+
+  .policy {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+.originalbrands{
+  display: flex;
+  flex-direction: row;
+  margin-top: 2rem;
+  padding-left: 1.5rem;
+}
+.verified-badge {
+  display: inline-flex;
+  align-items: center;
+  background-color: #e6f4ea;
+  color: #2e7d32;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 2px 6px 2px 4px;
+  border-radius: 12px;
+  border: 1px solid #b2dfdb;
+  gap: 4px;
+  margin-left: .5rem;
+  
+}
+
+.check-icon {
+  width: 12px;
+  height: 12px;
+  color: #2e7d32;
+}
+.card{
+  /* margin: 10px; */
+  
+
+  gap: 30px;
+  padding: 2rem;
+   display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+}
+.card img{
+  flex-shrink: 0;
+}
+.footer{
+  background-color: #d4ecfc;
+  text-align: center;
+  display: flex;
+  justify-content: center;  
+}
